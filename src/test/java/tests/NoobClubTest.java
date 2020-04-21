@@ -2,9 +2,9 @@ package tests;
 
 import com.codeborne.selenide.Selenide;
 import com.testexperiment.pageObjects.MainPage;
+import com.testexperiment.pageObjects.Menu;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import com.testexperiment.pageObjects.Menu;
 
 public class NoobClubTest extends BaseTest {
 
@@ -13,11 +13,11 @@ public class NoobClubTest extends BaseTest {
 
     @Test
     void linksClick() {
-      MainPage mainPage = new MainPage();
+        MainPage mainPage = new MainPage();
 
         Selenide.open("https://www.noob-club.ru");
 
-          new Menu().goToStart();
+        new Menu().goToStart();
 
         final int amountOfNews =
                 mainPage.getAmountOfNews();
